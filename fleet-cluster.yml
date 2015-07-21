@@ -1,0 +1,11 @@
+heat_template_version: '2015-04-30'
+description: "This is a Heat template to deploy Linux servers running fleet and etcd"
+
+resources:
+  fleet_server:
+    type: 'OS::Nova::Server'
+    properties:
+      key_name: 'elarson'
+      flavor: '512MB Standard Instance'
+      name: 'fleet-host'
+      image: 'CoreOS (Stable)'
