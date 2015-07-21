@@ -5,7 +5,7 @@ resources:
   fleet_server:
     type: 'OS::Nova::Server'
     properties:
-      key_name: 'elarson'
+      key_name: 'elarson_rackspace'
       flavor: '512MB Standard Instance'
       name: 'fleet-host'
       image: 'CoreOS (Stable)'
