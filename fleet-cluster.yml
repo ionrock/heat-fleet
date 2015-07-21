@@ -2,6 +2,12 @@ heat_template_version: '2015-04-30'
 description: "This is a Heat template to deploy Linux servers running fleet and etcd"
 
 resources:
+  ssh_key:
+    type: 'OS::Nova::KeyPair'
+    properties:
+      name: elarson
+      public_key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDfnJYVoLS10ML0YB3sXzrJvPTDlSQWHtFSAi34oG1McbbhooV3Bv+EI6zMnhVhvIUL5b2NYREJZ775QErzpH5tmHHP+0gNV5t9DxHsiJzqXuh1b1Vnnu3wvTkh02YeSdT26ZPKIXCY3rfF//gQj7Jy3xCTdaWjwr/xhAjIuJmzER1x5EsSHWSMgAcGJnQOdq1qSNIRnbShMp61rHAjHE6+kVmf+999Rs5if8TaskEkGMtAJsfZIBP0ZKBIsWEuHO5IyhzZOHKCyhE30kBXbSo6yLn08OQlI5ac27hp2ucv6VkdeAhoW7g+YruN5Pm+TK723KhNjURWWAZs4hAdxLT5 eric.larson@rackspace.com'
+
   fleet_server:
     type: 'OS::Nova::Server'
     properties:
