@@ -11,7 +11,7 @@ resources:
   fleet_server:
     type: 'OS::Nova::Server'
     properties:
-      key_name: 'elarson_rackspace'
+      key_name: { get_resource: ssh_key }
       flavor: '512MB Standard Instance'
       name: 'fleet-host'
       image: 'CoreOS (Stable)'
